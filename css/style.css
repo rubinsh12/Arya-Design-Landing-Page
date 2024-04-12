@@ -1,0 +1,1634 @@
+
+
+html,body{
+    height: 100%;
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    font-weight:400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #333333;
+    font-weight: 600;
+}
+
+p {
+    letter-spacing: 0;
+    line-height:1.8;
+}
+
+a{
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline:none;
+    text-decoration: none;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding{
+    padding: 80px 0;
+}
+
+.section-header{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-header h2 {
+    margin: 0 0 10px;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #333333;
+}
+
+.section-header h2 span {
+    color: #0539cb;
+}
+
+.sec-icon i {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.sec-icon {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.sec-icon::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: -70px;
+    margin-top: -5.5px;
+    top: 60%;
+    background: #333333;
+    width: 50px;
+}
+
+.sec-icon::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    right: -70px;
+    margin-top: -5.5px;
+    top: 60%;
+    background: #333;
+    width: 50px;
+}
+
+
+/*---------Default css ends----------*/
+
+/*-------------- 2. Preloader css starts ---------------*/
+
+.loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after {
+    content: '';
+    border: 1em solid #0539cb;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0; }
+    50% {
+        opacity: 1; }
+    100% {
+        transform: scale(1);
+        opacity: 0; }
+}
+
+/*---------- preloader css ends -------------*/
+
+/*---------- 3. Nav area css starts -------------*/
+
+.nav-area{
+    height: 65px;
+}
+
+.nav-area.sticky_navigation{
+    background: #ffffff;
+    height: 55px;
+}
+
+.sticky_navigation{
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out ;
+    -ms-transition: all 0.4s ease-out ;
+    -o-transition: all 0.4s ease-out ;
+    transition: all 0.4s ease-out ;
+    -webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+}
+
+.sticky_navigation .main-menu{
+    margin-top: 0;
+}
+
+.sticky_navigation .navbar-brand, .sticky_navigation .navbar-brand span {
+    color: #333333;
+}
+
+.sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
+    color: #0539cb;
+}
+
+.sticky_navigation .nav li a {
+    color: #333333;
+}
+
+.sticky_navigation .nav li.active a{
+    color: #0539cb;
+}
+
+.sticky_navigation .navbar-brand:hover{
+    color: #333333;
+}
+
+.main-menu{
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    margin-top: 10px;
+}
+
+.navbar{
+    border:0;
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    padding: 15px 0;
+    /* text-transform: uppercase; */
+    font-size: 25px;
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.navbar-brand span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar-right {
+    padding-top: 5px;
+}
+
+.navbar-right li{
+    display: inline-block;
+    float: none;
+}
+
+.navbar-right li a{
+    color: #ffffff;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+
+.navbar-right li.active a{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus{
+    background: none;
+}
+
+.navbar-toggle .icon-bar{
+    background: #777777;
+    color: #0539cb !important;
+}
+
+/*---------- Nav area css ends -------------*/
+
+/*----------- 4. Mouse Animate Icon css Starts ------------------*/
+
+.mouse-icon {
+    position: absolute;
+    left: 50%;
+    bottom: -160px;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    height: 50px;
+    width: 30px;
+    margin-left: -17px;
+    display: block;
+    z-index: 10;
+}
+
+.mouse-icon .wheel {
+    -webkit-animation-name: drop;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.mouse-icon .wheel {
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    width: 4px;
+    height: 10px;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes drop	{
+    0%   { top:5px;  opacity: 0;}
+    30%  { top:10px; opacity: 1;}
+    100% { top:25px; opacity: 0;}
+}
+
+/* --------- Mouse Animate Icon css ends -------------- */
+
+/* --------- 5. Banner area css starts -----------*/
+
+.banner-area{
+    background-image: url(../images/home/image.png); /*edit image*/
+    background-position: center;
+    -webkit-background-size:cover;
+    background-size:cover;
+    position: relative;
+    height: 100%;
+}
+
+.banner-table{
+    display: table;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.welcome-text{
+    color: #ffffff;
+}
+
+.welcome-text h2 {
+    margin: 10px 0;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: inherit;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.welcome-text h3 {
+    font-size: 30px;
+    color: #fece3d;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 1000;
+}
+.welcome-des {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+}
+
+.banner-btn a {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 35px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.banner-btn a:hover{
+    background: #0539cb;
+    color: #ffffff;
+}
+
+.banner-btn a.active{
+    background: #0539cb;
+    color: #ffffff;
+}
+
+@media (max-width: 991px){
+    .welcome-text{
+        text-align: center;
+        margin: 25px auto;
+    }
+}
+
+/*----text slider starts---*/
+
+.banner-text-area h3 {
+    font-size: 30px;
+    color: #0539cb;
+    margin: 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.banner-text-area h1 {
+    margin: 10px 0;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: inherit;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+
+.slider-area{
+    position: relative;
+}
+
+.slider-area-overlay{
+    position: relative;
+}
+
+.slider-area-overlay:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.container-fluid.main{
+    padding: 0;
+}
+
+.carousel .background.bgd-one {
+    background-image: url("../images/home/banner1.jpg"); /*--edit image--*/
+    background-position: center center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+.carousel .background.bgd-two {
+    background-image: url("../images/home/banner2.jpg"); /*--edit image--*/
+    background-position: center center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+.carousel .background.bgd-three {
+    background-image: url("../images/home/banner3.jpg"); /*--edit image--*/
+    background-position: center center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+.carousel-inner .item {
+    height: 100vh;
+}
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+a.slide-control:focus, a.slide-control:hover {
+    color: #0539cb;
+}
+
+.slider-middle-text {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.slide-control:hover,
+.slide-control:focus{
+    color: rgba(255,255,255,0.4);
+}
+
+/*.banner-text-area p {*/
+    /*color: #fff;*/
+    /*font-size: 16px;*/
+/*}*/
+
+.slide-btn a {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 35px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.slide-btn a:hover{
+    background: #0539cb;
+    color: #ffffff;
+}
+
+.slide-btn a.active{
+    background: #0539cb;
+    color: #ffffff;
+}
+
+/*----text slider ends---*/
+
+/*---image slider starts----*/
+
+.slide-control{color:#fff;font-size:80px;left:30px;margin-top:-70px;position:absolute;top:50%;}
+.slide-control.right{left:auto;right:30px;}
+
+.bg-image-one{
+    background-image: url(../images/home/banner1.jpg); /*edit image*/
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.bg-image-one:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.bg-image-two{
+    background-image: url(../images/home/banner2.jpg); /*edit image*/
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.bg-image-two:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.bg-image-three{
+    background-image: url(../images/home/banner3.jpg); /*edit image*/
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.bg-image-three:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+/*---image slider ends----*/
+
+
+/* --------------  Banner area css ends --------------- */
+
+/*-------- 6. About area css starts-----------*/
+
+.list-area i {
+    color: #0539cb;
+}
+
+.about-area .about-main h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #0539cb;
+    font-weight: 700;
+}
+
+.about-main {
+    padding-left: 30px;
+}
+
+.about-main h2 {
+    font-size: 26px;
+    text-transform: none;
+    line-height: 1.3;
+    font-weight: 600;
+    word-spacing: 0.25px;
+    margin: 0;
+}
+
+.about-area .single-about p {
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.about-area .about-main .button{
+    margin-top:15px;
+}
+
+.about-area .about-main .button i {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.about-video .single-video{
+    position:relative;
+}
+
+.about-video .single-video img{
+    width:100%;
+}
+
+.about-video .single-video::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.72);
+    opacity: 0.3;
+    visibility: visible;
+    transition: 0.7s;
+}
+
+.about-video .single-video:hover:before{
+    opacity:0;
+    visibility:hidden;
+}
+
+.about-video .single-video::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #0539cb;
+    transition: 0.5s;
+    height: 100%;
+    margin-left: 15px;
+    margin-top: 15px;
+    z-index: -2;
+}
+
+.about-video .single-video i {
+    background: #0539cb;
+}
+
+.about-video .single-video:hover:after {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.about-video .single-video i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    margin-left: -25px;
+    margin-top: -25px;
+    color: #fff;
+    cursor:pointer;
+    width: 50px;
+    transition: 0.9s;
+    height: 50px;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 20px;
+}
+
+.about-video .single-video:hover i{
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.list-area ul {
+    list-style: none;
+}
+
+.list-area li {
+    line-height: 1.8;
+}
+
+.list-area li i {
+    margin-right: 15px;
+}
+
+.about-main a {
+    background-color: #0539cb;
+    color: #ffffff;
+    padding: 10px 35px;
+    display: inline-block;
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/*-------- About area css ends -----------*/
+
+/*----------- 7. Services area css starts --------------*/
+
+
+.services-area{
+    background: #efefef;
+}
+
+.single-service {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 1px 1px 5px rgba(20,20,20,0.4);
+    position: relative;
+}
+
+.single-service h4 {
+    color: #333333;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 2.5;
+    margin: 0;
+}
+
+.single-service i {
+    color: #333333;
+    font-size: 50px;
+    height: 80px;
+    padding-top: 10px;
+    transition: .7s;
+}
+
+.single-service:hover i {
+    color: #fff;
+    padding: 0;
+}
+
+.single-service .animated-icon {
+    position: absolute;
+    content: "";
+    color: #333333;
+    font-size: 75px;
+    background: transparent;
+    right: 0;
+    top: 50%;
+    bottom: 33px;
+    z-index: 3;
+    border: none;
+    transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.single-service:hover .animated-icon {
+    color: #333;
+    right: 20%;
+    opacity: 0.3;
+    visibility: visible;
+}
+
+.single-service:hover {
+    background: #0539cb;
+    color: #fff;
+    transition: .7s;
+}
+
+.single-service i {
+    color: #0539cb;
+}
+
+.single-service:hover h4 {
+    color: #ffffff;
+}
+
+/*-----------Services area css ends--------------*/
+
+/*----------- 8. Statictic area css starts --------------*/
+
+.statistic-area{
+    background-image: url(../images/statistic/stats.jpg); /*--- edit image ---*/
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.statistic-area .sts-overlay {
+    background: rgba(0,0,0,0.8);
+}
+
+.single-count i {
+    color: #ffffff;
+    font-size: 35px;
+}
+
+.single-count h2 {
+    font-size: 50px;
+    color: #0539cb;
+}
+
+.single-count p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/*----------- 8. Statictic area css ends --------------*/
+
+/*----------- 9. Portfolio area starts--------------*/
+
+#portfolio-section {
+    padding-bottom: 0;
+}
+
+.project-item img {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(0,0,0,0.9);
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: crosshair;
+}
+
+.overlay .overlay-inner {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay .overlay-inner h4 {
+    color: #0539cb!important;
+    margin-bottom: 0!important;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.overlay .overlay-inner p {
+    color: #fff;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    margin-top: 10px;
+}
+
+.project-item:hover .overlay .overlay-inner h4 {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.project-item:hover .overlay .overlay-inner p {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.project-item a:hover .overlay {
+    opacity: 1;
+}
+
+ul.port-nav-list {
+    padding: 0 0 50px 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.port-nav-list li {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #0539cb;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+ul.port-nav-list li a {
+    display: block;
+    cursor: pointer;
+    color: rgb(73, 73, 73);
+    font-size: 14px;
+    padding: 8px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 900;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+ul.port-nav-list li a.active {
+    color: #fff;
+    border: 1px solid #0539cb;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #0539cb;
+}
+
+.port-items {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.portfolio-items .port-items .single-port {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.single-port{
+    padding: 0;
+}
+
+
+/*-----------portfolio area ends--------------*/
+
+
+/*---------- 11. Team area css starts-----------*/
+
+
+.list-inline > li {
+    display: inline-block;
+    padding-right: 0;
+    padding-left: 2px;
+}
+
+.team-member img {
+    width:100%;
+}
+
+.team-member:hover .team-image .social-area {
+    top:0;
+}
+
+.team-member .team-designation {
+    padding:0 0 10px;
+    text-align:center;
+    border:1px solid rgba(0,0,0,0.10);
+    border-top:0;
+}
+
+.team-member:hover .team-designation h2 {
+    color: #0539cb;
+}
+
+.team-member h2 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+    line-height: 2;
+    padding-top: 10px;
+}
+
+.team-member p {
+    font-size:15px;
+    font-weight:700;
+    color: #333333;
+}
+
+.team-image.team-overlay {
+    position:relative;
+    overflow:hidden;
+}
+
+.team-image .social-area {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    text-align:center;
+    transition:all .5s ease;
+}
+
+.team-member:hover .team-image .social-area {
+    top:0;
+}
+
+.team-image .social-area .team-text {
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+.team-image .social-area .team-text .team-text-middle {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.team-text-middle a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #0539cb;
+    border-radius: 50%;
+    background: #0539cb;
+}
+
+.team-text-middle a:hover {
+    color: #0539cb;
+    background: #fff;
+    border-color: #fff;
+}
+
+.team-text-middle a i {
+    padding: 12px;
+}
+
+.img-box {
+    position:relative;
+    vertical-align:top;
+}
+
+.img-box .overlay {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(248,207,39,0.7);
+    text-align:center;
+    transition:all .5s ease;
+}
+
+.img-box .overlay .box {
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+.img-box .overlay .box .content-box {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.single-team:hover .img-box .overlay {
+    top:0;
+}
+
+/*---------- Team area css ends-----------*/
+
+
+/*-------- 13. Testimonial area css starts------------*/
+
+.testimonial-area .sec-icon i {
+    color: #ffffff;
+}
+
+.testimonial-area .section-header .sec-icon::before {
+    background: #fff;
+}
+
+.testimonial-area .section-header .sec-icon::after {
+    background: #fff;
+}
+
+.testimonial-area{
+    background: url("../images/testimonial/image.png"); /*edit image*/
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-attachment:fixed;
+    color: #fff;
+    position: relative;
+}
+.testimonial-area:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+#testimonial-carousel .item p {
+    width: 70%;
+    margin: 0 auto;
+    color: #ffffff;
+    cursor: e-resize;
+    line-height: 1.9;
+    font-style: italic;
+}
+
+.testimonial-area .section-header {
+    margin-bottom: 50px;
+}
+
+#testimonial-carousel .item h5 strong {
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fece3d;
+}
+
+.testimonial-area .section-header h2 {
+    color: #ffffff;
+}
+
+.testimonial-area .section-header h3 {
+    color: #ffffff;
+}
+
+#testimonial-carousel .item h6 {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#testimonial-carousel .item {
+    text-align: center;
+    color: #fff;
+}
+
+#testimonial-carousel .item h5{
+    color: #000000;
+    margin-top: 40px;
+}
+
+#testimonial-carousel .item i {
+    font-size: 45px;
+    text-align: center;
+    line-height: 2.8;
+    width: 100%;
+    margin: 0px auto 30px;
+    color: #000;
+}
+
+#testimonial-carousel .carousel-indicators {
+    bottom: -45px;
+}
+
+#testimonial-carousel .carousel-indicators li {
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.4s;
+    border-color: #000000;
+}
+
+#testimonial-carousel .carousel-indicators .active {
+    opacity: 1;
+    background: #000000;
+}
+
+
+
+/*-------- 12. Testimonial area css ends------------*/
+
+/*--------- 14. Contact area css starts -----------*/
+
+
+#contact-form .form-control{
+    margin-bottom: 18px;
+    padding: 10px 20px;
+    color: #6c6c6c;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+
+}
+
+.top-contact-text {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#contact-form textarea.form-control{
+    padding: 10px 20px;
+    color: #6c6c6c;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+
+}
+
+#contact-form input[type=text].form-control,
+#contact-form input[type=email].form-control {
+    height: 42px;
+}
+#contact-form textarea.form-control {
+    line-height: 25px;
+}
+#contact-form .form-control::-webkit-input-placeholder {
+    color: #6c6c6c;
+}
+#contact-form .form-control::-moz-placeholder {
+    color: #6c6c6c;
+}
+#contact-form .form-control:-ms-input-placeholder {
+    color: #6c6c6c;
+}
+#contact-form .form-control:-moz-placeholder {
+    color: #6c6c6c;
+}
+#contact-form .btn {
+    padding: 9px 18px;
+    text-transform: capitalize;
+}
+
+.btn.btn-send {
+    background-color: #0539cb;
+    color: #ffffff;
+    padding: 10px 35px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.top-contact-text h2{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.top-contact-text p{
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-size: 11px;
+    color: #777;
+}
+
+.contact-icon li{
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 25px;
+}
+
+.contact-icon a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    color: #222222;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: 2px solid #222222;
+    background: transparent;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.contact-icon a:hover{
+    background: #222222;
+    color: #ffffff;
+}
+
+
+.middle-space {
+    height: 30px;
+}
+
+.con-right-header {
+    margin: 0;
+    color: #0539cb;
+}
+.con-right-side {
+    margin-left: 30px;
+}
+#con-right-accordion .panel,
+#con-right-accordion .panel-body {
+    border: none;
+}
+#con-right-accordion.panel-group .panel + .panel {
+    margin-top: 25px;
+}
+#con-right-accordion .panel-heading {
+    padding: 0;
+}
+#con-right-accordion .panel,
+#con-right-accordion .panel-heading,
+#con-right-accordion .panel-heading:hover,
+#con-right-accordion .panel-heading:focus,
+#con-right-accordion .panel-heading:active,
+#con-right-accordion .panel-heading.active {
+    background: none;
+}
+#con-right-accordion .panel-title {
+    color: #101010;
+    font-weight: normal;
+}
+#con-right-accordion .panel-title .fa {
+    margin-right: 10px;
+    font-size: 14px;
+}
+#con-right-accordion .panel-title .fa {
+    margin-top: 3px;
+}
+#con-right-accordion .panel-heading,
+#con-right-accordion .panel-title a,
+#con-right-accordion .panel-heading.active .panel-title a,
+#con-right-accordion .panel-title a:hover,
+#con-right-accordion .panel-title a:focus {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 600;
+}
+#con-right-accordion .panel-collapse > .panel-body {
+    padding: 15px 20px 0;
+    color: #6c6c6c;
+}
+#con-right-accordion .panel-collapse > .panel-body p {
+    margin-bottom: 0;
+}
+#con-right-accordion .panel-collapse > .panel-body p + p {
+    margin-top: 15px;
+}
+
+/*--------- Contact area css ends --------------*/
+
+/*-------- 15. Client area css starts------------*/
+
+.client-area .item{
+    cursor: e-resize;
+}
+
+.client-area {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #EFEFEF;
+}
+
+/*-------- Client area css ends------------*/
+
+/*-------- 16. Footer top area css starts---------*/
+
+.footer-top-area {
+    background: #393939;
+    padding: 50px 0;
+}
+
+.footer-top-area h4 {
+    color: #fff;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.footer-top-area h6 {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.footer-top-area h6 a {
+    color: #d4d4d4;
+    font-weight: 700;
+}
+
+.footer-top-area p {
+    color: #d4d4d4;
+    font-weight: 300;
+    margin-bottom: 35px;
+    line-height: 1.7;
+    font-size: 13px;
+    width: 90%;
+}
+
+ul.social-list {
+    padding: 0;
+    list-style: none;
+}
+
+ul.social-list li {
+    display: inline-block;
+    margin-right: 9px;
+    margin-bottom: 3px;
+}
+
+ul.social-list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff !important;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0539cb;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #0539cb;
+}
+
+ul.social-list li a:hover i {
+    color: #ffffff;
+}
+
+ul.social-list li a:hover {
+    background: #0539cb;
+}
+
+ul.social-list li a:hover i {
+    color: #fff;
+}
+
+ul.social-list li a:hover {
+    border: 1px solid #0539cb;
+}
+
+ul.social-list li a i {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.footer-logo {
+    margin-top: -10px;
+}
+
+.latest-news ul {
+    margin: 0;
+    padding: 0;
+}
+
+.latest-news ul li {
+    list-style: none;
+    padding-top: 15px;
+    border-top: 1px solid #535353;
+}
+
+.latest-news ul li:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.latest-news ul li span {
+    line-height: 1.8;
+    margin: 0 0 15px;
+    display: inline-block;
+    font-size: 13px;
+    color: #b4b4b4;
+    margin-bottom: 10px;
+}
+
+
+.foo-no-padding{
+    padding: 0;
+}
+
+.single-footer-top.photo-galleries h4 {
+    margin-left: -15px;
+}
+
+/*.photo-galleries ul {
+    margin: 0;
+    padding: 0;
+}
+
+.photo-galleries ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 6px
+}
+
+.photo-galleries ul li a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.photo-galleries ul li a img {
+    width: 81px;
+    cursor: crosshair;
+}*/
+
+/*-------- Footer top area ends---------*/
+
+/*---------- 17. Footer bottom area css starts---------*/
+
+.footer-bottom {
+    padding: 30px 0;
+    background: #1f2021;
+    border-top: 1px solid #535353;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.single-footer-top h4 {
+    margin-bottom: 30px;
+}
+
+.foot-navs{
+    margin-top: 15px;
+}
+
+.foot-navs li a {
+    color: #d4d4d4;
+    display: inline-block;
+    font-family: "montserratlight",sans-serif;
+    padding: 0 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.single-footer-top h4 b span {
+    color: #0539cb;
+}
+
+/*---------- Footer bottom area css ends---------------*/
